@@ -19,17 +19,17 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-End-Machine-Learning-Pipeline
+https://github.com/CodeWithKaleem/End-to-End-ML-pipeline
 ```
 
 ### STEP 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n mlproj python=3.8 -y
+conda create -n MLproject python=3.8 -y
 ```
 
 ```bash
-conda activate mlproj
+conda activate MLproject
 ```
 
 ### STEP 02- install the requirements
@@ -41,3 +41,16 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
+
+## Docker Custom image
+
+docker build -t codewithkaleem/wine_quality_prediction:latest .
+
+docker run -p 8080:8080 codewithkaleem/wine_quality_prediction:latest
+
+docker run -d -p 8080:8080 codewithkaleem/wine_quality_prediction:latest
+
+## Push to Docker Hub:
+
+1. docker login
+2. docker push codewithkaleem/wine_quality_prediction:latest
